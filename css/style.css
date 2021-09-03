@@ -106,10 +106,14 @@ img {
 
 .navigation-link:hover,
 .navigation-link:focus {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--touch-color);
 }
 
 .navigation-link:not(:last-child) {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 50px;
 }
 .navigation {
@@ -120,14 +124,22 @@ img {
   letter-spacing: 0.02em;
   margin-right: 50px;
 }
+
+
 .media-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: auto;
 }
-.media-list:hover,
-.media-list:focus {
+.media-list-link{
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.media-list-link:hover,
+.media-list-link:focus {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--touch-color);
 }
 
@@ -139,6 +151,23 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
   margin-right: 50px;
+}
+.link-after::after{
+  display: block;
+  align-items: center;
+  position: relative;
+  top: 29px;
+}
+.link-after:hover::after,
+.link-after:active::after{
+  content: ''; 
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  margin: 0 auto;
+  border-radius: 2px;
+  
 }
 
 /*========style index============*/
@@ -194,6 +223,8 @@ h1 {
 
 .service:hover,
 .service:focus {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #188ce8;
 }
 
@@ -210,6 +241,10 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
   border: none;
+    transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+
 }
 /*======About========*/
 
@@ -381,9 +416,13 @@ h1 {
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
+    transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:focus,
 .social-list-link:hover {
+    transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #ffffff;
   background-color: #2196f3;
 }
@@ -413,6 +452,8 @@ h1 {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #afb1b8;
+    transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .clients-list-icon{
     width: 106px;
@@ -420,6 +461,8 @@ h1 {
     fill:currentColor;
   }
 .clients-list-link:hover, .clients-list-link:focus {
+    transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    color: #2196f3;
    border: 1px solid #2196f3;
 }
@@ -468,11 +511,16 @@ h1 {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .sign-link:hover,
 .sign-link:focus,
 .sign-link:active {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms linear;
   color: var(--while-color);
   background: #2196f3;
 }
@@ -501,6 +549,10 @@ h1 {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  position: relative;
+  display: block;
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list:focus,
@@ -508,6 +560,8 @@ h1 {
   background-color: var(--while-color);
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.6),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+     transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item {
@@ -536,6 +590,35 @@ h1 {
   letter-spacing: 0.03em;
   color: #757575;
 }
+.overlay-portfolio{
+  background: rgba(33, 150, 243, 0.9);
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 1.56;
+  color: #FFFFFF;
+  padding-top: 64px;
+  padding-left: 23px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:100%;
+  width: 100%;
+  overflow: auto;
+  transition: transform 500ms linear;
+  transform: translateY(100%);
+  
+}
+
+.team-portfolio-img{
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-list:hover .overlay-portfolio,
+.portfolio-list:focus .overlay-portfolio
+ {
+  transform: translateY(0%);
+}
 
 /*===== footer======*/
 .footer-container {
@@ -560,13 +643,19 @@ h1 {
   margin-bottom: 20px;
 }
 .adress-list {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 9px;
 }
 .mail-list {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 9px;
 }
 .tel-list {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: rgba(255, 255, 255, 0.6);
 }
 .adress {
@@ -582,6 +671,8 @@ h1 {
 .mail-list:focus,
 .tel-list:hover,
 .tel-list:focus {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--touch-color);
 }
 .footer-title {
@@ -601,7 +692,7 @@ h1 {
   justify-content: space-between;
 }
 .social-list-link-footer {
-  display: flex;
+    display: flex;
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
@@ -609,10 +700,14 @@ h1 {
   height: 44px;
   border-radius: 50%;
  background: rgba(255, 255, 255, 0.1); 
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 .social-list-link-footer:focus,
 .social-list-link-footer:hover {
+   transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #ffffff;
   background-color: #2196f3;
 }

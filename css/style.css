@@ -220,8 +220,6 @@ h1 {
 
 .service:hover,
 .service:focus {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #188ce8;
 }
 
@@ -435,8 +433,6 @@ h1 {
 }
 .social-list-link:focus,
 .social-list-link:hover {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #ffffff;
   background-color: #2196f3;
 }
@@ -476,8 +472,6 @@ h1 {
 }
 .clients-list-link:hover,
 .clients-list-link:focus {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #2196f3;
   border: 1px solid #2196f3;
 }
@@ -768,6 +762,11 @@ h1 {
   top: 8px;
   right: 8px;
   padding: 0;
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn:hover .close {
+  fill: var(--touch-color);
 }
 .close {
   width: 18px;

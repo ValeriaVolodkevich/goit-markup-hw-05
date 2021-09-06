@@ -103,16 +103,13 @@ img {
 
 .navigation-link:hover,
 .navigation-link:focus {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--touch-color);
 }
 
 .navigation-link:not(:last-child) {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 50px;
 }
+
 .navigation {
   font: var(--main-font);
   font-weight: 500;
@@ -134,8 +131,6 @@ img {
 }
 .media-list-link:hover,
 .media-list-link:focus {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--touch-color);
 }
 
@@ -152,6 +147,8 @@ img {
   display: block;
   align-items: center;
   position: relative;
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-link.current::after {
   content: "";
@@ -496,15 +493,7 @@ h1 {
   margin-top: 8px;
   border: 1px solid transparent;
 }
-.sign-link {
-  margin-right: 8px;
-}
 
-.sign-link {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
 .sign-link {
   padding-right: 22px;
   padding-bottom: 6px;
@@ -520,6 +509,9 @@ h1 {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  margin-right: 8px;
   transition: color 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -527,8 +519,6 @@ h1 {
 .sign-link:hover,
 .sign-link:focus,
 .sign-link:active {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms linear;
   color: var(--while-color);
   background: #2196f3;
 }
@@ -568,8 +558,6 @@ h1 {
   background-color: var(--while-color);
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.6),
     0px 1px 1px rgba(0, 0, 0, 0.12);
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item {
@@ -676,8 +664,6 @@ h1 {
 .mail-list:focus,
 .tel-list:hover,
 .tel-list:focus {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--touch-color);
 }
 .footer-title {
@@ -711,8 +697,6 @@ h1 {
 
 .social-list-link-footer:focus,
 .social-list-link-footer:hover {
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #ffffff;
   background-color: #2196f3;
 }
